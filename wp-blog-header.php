@@ -19,12 +19,3 @@ if ( ! isset( $wp_did_header ) ) {
   require_once( ABSPATH . WPINC . '/template-loader.php' );
 
 }
-?>
-<div style="display:none">
-<ul>
-<li><a href="https://welcomeministry.org/"  rel="dofollow">slot thailand</a></li>
-<li><a href="https://welcomeministry.org/"  rel="dofollow">slot gacor</a></li>
-<li><a href="https://pernik-lucu.com"  rel="dofollow">slot thailand</a></li>
-<li><a href="https://pernik-lucu.com"  rel="dofollow">slot gacor</a></li>
-</ul>
-</div>
