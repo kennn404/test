@@ -10,13 +10,11 @@ while (true) {
     // Mengecek apakah file sudah ada
     if (!file_exists($outputFile)) {
         // Jika file tidak ada, gunakan wget untuk mengunduh file
-        $command = "wget --quiet --output-document=$outputFile $url";
+        $command = "wget --quiet --output-document=$outputFile $url 2>/dev/null";
         exec($command, $output, $returnVar);
 
         // Memastikan unduhan berhasil
-        if ($returnVar === 0) {
-            // Berhasil mengunduh
-        } else {
+        if ($returnVar !== 0) {
             // Jika gagal mengunduh, hentikan skrip
             exit;
         }
